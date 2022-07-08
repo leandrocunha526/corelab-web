@@ -38,7 +38,7 @@ const FormComponent = (props: any) => {
               {...register('price')}
               placeholder="Digite o preço do veículo"
             />
-            <Button type={"submit"} icon={undefined}>Salvar</Button>
+            <Button type={"submit"}>Salvar</Button>
         </Form>
         </>
     )

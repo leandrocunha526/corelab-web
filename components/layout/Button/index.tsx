@@ -4,7 +4,7 @@ import ButtonStyle from "./styles"
 interface Props{
   children: string;
   type: string;
-  icon: any;
+  icon?: string;
 }
 
 const Icon = styled.img`
