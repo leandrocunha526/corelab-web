@@ -52,14 +52,13 @@ const Home = () => {
   return (
       <HomeStyle>
         <Button>ADICIONAR</Button>
-        <p>Meus anúncios</p>
         <b style={{ color: 'red' }}>{message}</b>
         {data.length > 0 &&
-          <Card
-            vehicles={data}
-            changeFavorite={(_id: string, isFavorite: boolean) => changeFavorite(_id, isFavorite)}
-            Delete={(_id: string) => Delete(_id)}
-            Edit={(key: any) => Edit(key)} />}
+          <><p>Meus anúncios</p><Card
+          vehicles={data}
+          changeFavorite={(_id: string, isFavorite: boolean) => changeFavorite(_id, isFavorite)}
+          Delete={(_id: string) => Delete(_id)}
+          Edit={(key: any) => Edit(key)} /></>}
         {!data.length &&
           <h3>Não há anúncios cadastrados</h3>}
       </HomeStyle>
