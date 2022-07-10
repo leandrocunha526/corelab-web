@@ -1,35 +1,39 @@
 import styled from "styled-components";
 
+declare module "styled-components" {
+  export interface DefaultTheme {
+    backgroundCard: string;
+  }
+}
+
 const CardStyles = styled.div`
-    text-decoration: none;
-    padding: 1em;
-    color: #FFFFFF;
-    border-radius: 10px;
-    width: 200px;
-    height: 120px;
-    background-color: ${props => props.theme.backgroundCard};
-    border: 1 px solid;
-    font-weight: 100;
-    text-align: left;
-    border: 1px solid;
+  padding: 0.2em;
+  color: #ffffff;
+  border-radius: 0px;
+  width: 230px;
+  height: 200px;
+  background-color: ${(props) => props.theme.backgroundCard};
+  border: 1 px solid;
+  font-weight: 100;
+  text-align: left;
+  border: 1px solid;
+  text-decoration: none;
 
-    h2 {
-        font-size: 1rem;
-        margin: 0 0 1rem 0;
-    }
+  span {
+    font-size: 1rem;
+    margin: 0;
+  }
 
-    p {
-        font-size: 1rem;
-        line-height: 1rem;
-        margin: 0;
-    }
+  button {
+    margin: 3px;
+    margin-right: 1px;
+  }
 
-    &:hover,
-    &:focus,
-    &:active{
-        border-color: #000000;
-        color: #0075f3;
-    }
-`
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #000000;
+  }
+`;
 
-export default CardStyles
+export default CardStyles;

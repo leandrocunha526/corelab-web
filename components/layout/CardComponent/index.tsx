@@ -9,34 +9,34 @@ const CardPosition = styled.div`
 `
 
 const CardComponent = (props: any) => {
-    return (
-        <CardStyles>
-         <CardPosition>
-          <button onClick={() => props.Favorite()}>{
-            props.isFavorite ? "HeartFavoriteIcon.png" : "HeartIcon.png"
-          }</button>
-           {
-            props.showEdit &&
-            <button onClick={() => props.Edit()}>Editar</button>
-           }
-           <button onClick={() => props.Delete()}>Remover</button>
-          </CardPosition>
-         <Info>
-            <h2>Nome: {props.name}</h2>
-            <p>
-              <b>Descrição: </b> {props.description}
-              <b>Preço: </b> {props.price}
-              <b>Cor: </b> {props.color}
-              <b>Ano: </b> {props.year}
-            </p>
-         </Info>
-        </CardStyles>
-    )
+  return (
+    <CardStyles>
+      <CardPosition>
+        {
+          props.showEdit &&
+          <button onClick={() => props.Edit()}><img src={"editIcon.png"} width={"30d"} /></button>
+        }
+        <button onClick={() => props.Delete()}><img src={"deleteIcon.png"} width={"17px"} /></button>
+        <button onClick={() => props.Favorite()}><img src={
+          props.isFavorite ? "HeartFavoriteIcon.png" : "HeartIcon.png"
+        } width={"20px"} /></button>
+      </CardPosition >
+      <Info>
+        <span>
+          <b>Nome: </b>{props.name} <br />
+          <b>Descrição: </b>{props.description}<br />
+          <b>Preço: </b> {props.price}<br />
+          <b>Cor: </b> {props.color}<br />
+          <b>Ano: </b> {props.year}<br />
+        </span>
+      </Info>
+    </CardStyles >
+  )
 }
 
 CardComponent.defaultProps = {
-    Edit: () => {},
-    showEdit: true,
+  Edit: () => { },
+  showEdit: true,
 }
 
 export default CardComponent

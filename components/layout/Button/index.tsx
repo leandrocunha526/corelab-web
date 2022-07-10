@@ -3,7 +3,7 @@ import ButtonStyle from "./styles"
 
 interface Props{
   children: string;
-  type: string;
+  type?: string;
   icon?: string;
 }
 
