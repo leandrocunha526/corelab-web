@@ -25,6 +25,7 @@ const CardComponent = (props: any) => {
         <span>
           <b>Nome: </b>{props.name} <br />
           <b>Descrição: </b>{props.description}<br />
+          <b>Placa: </b>{props.plate}<br />
           <b>Preço: </b> {props.price}<br />
           <b>Cor: </b> {props.color}<br />
           <b>Ano: </b> {props.year}<br />

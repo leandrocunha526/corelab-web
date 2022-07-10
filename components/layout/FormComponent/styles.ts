@@ -1,26 +1,31 @@
 import styled from "styled-components"
 
-const Form = styled.div`
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    padding: 2rem 1 rem;
+const Form = styled.form`
     display: flex;
-    background-color: #FFFFFF;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 3rem 2rem;
     padding-bottom: 1rem;
+    @media screen and (min-width:${props => props.theme.brakepoints.laptopSize}) {
+      background-color: ${props => props.theme.background};
+    }
     Button {
       align-self: flex-end;
     }
+    label {
+      margin-left: 1rem;
+    }
     input {
-      height: 100%;
-      width: 100%;
       font-size: 1rem;
       outline: none;
-      border: 1px solid black;
-      display: flex;
       align-items: center;
       border-radius: 100px;
-      padding: 0 34px;
+      padding: 0px 34px;
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      border: "none";
     }
 `
 export default Form

@@ -3,8 +3,9 @@ import ButtonStyle from "./styles"
 
 interface Props{
   children: string;
-  type?: string;
   icon?: string;
+  onClick?: any;
+  type?: string;
 }
 
 const Icon = styled.img`
@@ -17,7 +18,9 @@ const Icon = styled.img`
 const Button: React.FC<Props> = (props: Props) => {
   return (
     <>
-      <ButtonStyle>
+      <ButtonStyle
+        onClick={props.onClick}
+      >
         {props.children}
       </ButtonStyle>
       <Icon src={props.icon} />

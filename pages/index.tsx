@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
       <HomeStyle>
-        <Button>ADICIONAR</Button>
+        <Button onClick={() => route.push('/register')}>ADICIONAR</Button>
         <b style={{ color: 'red' }}>{message}</b>
         {data.length > 0 &&
           <><p>Meus anúncios</p><Card

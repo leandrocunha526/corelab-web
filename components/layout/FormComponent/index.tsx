@@ -8,31 +8,49 @@ const FormComponent = (props: any) => {
     return (
         <>
          <Form onSubmit={handleSubmit(props.handleSubmit)}>
+            <label>
+              Nome
+             </label>
             <input
               type="text"
-              {...register('name')}
+              {...register('name', {required: true})}
               placeholder="Digite o nome do veículo"
             />
+            <label>
+              Descrição
+            </label>
             <input
               type="text"
               {...register('description')}
               placeholder="Digite a descrição do veículo"
             />
+            <label>
+              Placa
+            </label>
             <input
               type="text"
               {...register('plate')}
-              placeholder="Digite o local"
+              placeholder="Digite a placa"
             />
+            <label>
+              Ano
+            </label>
             <input
               type="number"
               {...register('year')}
               placeholder="Digite o ano do veículo"
             />
+            <label>
+              Cor
+            </label>
             <input
               type="text"
               {...register('color')}
               placeholder="Digite a color do veículo"
             />
+            <label>
+              Preço
+            </label>
             <input
               type="number"
               {...register('price')}

@@ -12,7 +12,7 @@ const StylesGlobal = createGlobalStyle`
   body{
     width: 100%;
     padding: 0 24px;
-    padding-top: 5rem;
+    padding-top: 1rem;
     @media screen and (min-width: ${props => props.theme.brakepoints.laptopSize}){
       max-width: 869px;
       margin: auto;
