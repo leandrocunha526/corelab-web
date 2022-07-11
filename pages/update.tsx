@@ -16,7 +16,7 @@ const Update = () => {
     }
     api.put("/update", request).then((res) => {
         if(res.status === 200) {
-           alert("O veículo foi atualizado com sucesso, aperte OK e será redirecionado para tela inicial")
+           alert("O veículo foi atualizado com sucesso, aperte OK e será redirecionado para os anúncios")
         }
         route.push("/")
     })
