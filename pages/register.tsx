@@ -1,9 +1,9 @@
-import api from "../services/api";
-import { useState } from "react";
-import Form from "../components/Form";
+import api from "../services/api"
+import Form from "../components/Form"
+import { useRouter } from "next/router"
 
 const Register = () => {
-    const [message, setMessage] = useState("")
+    const route = useRouter()
 
     const registerVehicle = (data: any) => {
     const request = {
@@ -15,8 +15,9 @@ const Register = () => {
     try{
       api.post('/register', request).then(res => {
         if(res.status === 201){
-            setMessage("Veículo cadastrado com sucesso")
+            alert("Veículo cadastrado com êxito, aperte OK e será redirecionado para os anúncios")
         }
+        route.push("/")
     })
     }
     catch(error){
@@ -25,11 +26,7 @@ const Register = () => {
   }
 
   return (
-    <>
-      <Form handleSubmit={registerVehicle}>
-      </Form>
-      <p>{message}</p>
-    </>
+      <Form handleSubmit={registerVehicle}/>
   )
 }
 
