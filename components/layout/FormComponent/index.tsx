@@ -46,7 +46,7 @@ const FormComponent = (props: any) => {
             <input
               type="text"
               {...register('color')}
-              placeholder="Digite a color do veículo"
+              placeholder="Digite a cor do veículo"
             />
             <label>
               Preço
