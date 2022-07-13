@@ -40,6 +40,7 @@ const FilterForm = styled.form`
         font-size: 1rem;
         padding: 10px;
         outline: none;
+        background-color: #FFFFFF;
     }
 `
 
