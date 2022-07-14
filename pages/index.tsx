@@ -33,6 +33,15 @@ const Input = styled.input`
     }
 `
 
+const ButtonSearch = styled.button`
+  right: 4rem;
+  position: absolute;
+  img{
+    width: 30px;
+    transform: rotate(180deg);
+  }
+`
+
 const Home = () => {
   const [data, setData] = useState([])
   const [message, setMessage] = useState("")
@@ -93,6 +102,7 @@ const Home = () => {
     <HomeStyle>
       <FormSearch onSubmit={handleSubmit(handleSearch)}>
         <Input placeholder="Buscar" {...register('search')} />
+        <ButtonSearch type={'submit'}><img src={'/ArrowIcon.png'}/></ButtonSearch>
         <button onClick={() => route.push('/filters')}><img src={"/filterIcon.png"} /></button>
       </FormSearch>
       <Button onClick={() => route.push('/register')} icon={"/AddIcon.png"}>ADICIONAR</Button>
