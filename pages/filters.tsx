@@ -68,9 +68,9 @@ const Filter = () => {
 
     const filters = () => {
         api.get('/filters').then(({ data }) => {
-            setYears([...years, data.years])
-            setName([...names, data.names])
-            setColors([...colors, data.colors])
+            setYears([...years, data.year])
+            setName([...names, data.name])
+            setColors([...colors, data.color])
         })
     }
 

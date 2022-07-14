@@ -14,7 +14,7 @@ const CardStyles = styled.div`
   height: 200px;
   background-color: ${(props) => props.theme.backgroundCard};
   border: 1 px solid;
-  font-weight: 100;
+  font-weight: 100px;
   text-align: left;
   border: 1px solid;
   text-decoration: none;
