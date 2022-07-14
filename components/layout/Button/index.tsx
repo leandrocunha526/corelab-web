@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ButtonStyle from "./styles"
 
-interface Props{
+interface Props {
   children: string;
   icon?: string;
   onClick?: any;
@@ -10,7 +10,7 @@ interface Props{
 
 const Icon = styled.img`
   position: relative;
-  left: -100px;
+  left: -20%;
   top: -46px;
   background-color: transparent;
 `
