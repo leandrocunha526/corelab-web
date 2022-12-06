@@ -9,7 +9,7 @@ declare module "styled-components" {
 const CardStyles = styled.div`
   padding: 0.2em;
   color: #ffffff;
-  border-radius: 0px;
+  border-radius: 8px;
   width: 230px;
   height: 200px;
   background-color: ${(props) => props.theme.backgroundCard};

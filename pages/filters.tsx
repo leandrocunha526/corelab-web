@@ -45,7 +45,7 @@ const FilterForm = styled.form`
 `
 
 const PriceRange = styled.div`
-    gap: 10rem;
+    gap: 1rem;
     display: flex;
     input {
         border: 1px solid black;
